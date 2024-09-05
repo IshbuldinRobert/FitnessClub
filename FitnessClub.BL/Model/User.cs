@@ -1,5 +1,6 @@
 ﻿namespace FitnessClub.BL.Model
 {
+    [Serializable]
     public class User
     {
         #region Свойства

@@ -1,14 +1,13 @@
-﻿using System;
-
-namespace FitnessClub.BL.Model
+﻿namespace FitnessClub.BL.Model
 {
     /// <summary>
     /// Пол.
     /// </summary>
+    [Serializable]
     public class Gender
     {
         /// <summary>
-        /// Название.
+        /// Название пола.
         /// </summary>
         public string Name { get; }
 
