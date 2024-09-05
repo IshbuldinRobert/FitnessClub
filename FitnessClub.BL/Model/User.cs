@@ -78,7 +78,11 @@
 
         public override string ToString()
         {
-            return Name;
+            return $"Имя пользователя: {Name}\n" +
+                $"Гендер: {Gender}\n" +
+                $"Дата рождения: {Birthdate.ToString()}\n" +
+                $"Вес: {Weight}\n" +
+                $"Рост: {Height}";
         }
     }
 }

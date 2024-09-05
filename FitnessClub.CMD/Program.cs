@@ -7,7 +7,23 @@ namespace FitnessClub.CMD
         static void Main(string[] args)
         {
             Console.WriteLine("Вас приветствует приложения Fitness Club");
+            Console.WriteLine("1. Зарегистрироваться\n" +
+                              "2. Войти");
+            int choise = int.Parse(Console.ReadLine());
 
+            switch (choise)
+            {
+                case 1:
+                    FirstChoise();
+                    break;
+                case 2:
+                    SecondChoise();
+                    break;
+            }
+        }
+
+        private static void FirstChoise()
+        {
             Console.WriteLine("Введите имя пользователя");
             var name = Console.ReadLine();
 
@@ -25,6 +41,12 @@ namespace FitnessClub.CMD
 
             var userController = new UserController(name, gender, birthdate, weight, height);
             userController.Save();
+        }
+
+        private static void SecondChoise()
+        {
+            UserController userController = new UserController();
+            Console.WriteLine(userController.User);
         }
     }
 }
